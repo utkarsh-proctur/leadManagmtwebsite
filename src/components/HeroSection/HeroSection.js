@@ -4,6 +4,7 @@ import img1 from "../images/hritherosectionimg.png";
 import img2 from "../images/hritgroupofinstitutions.png";
 import img3 from "../images/hritherosectionimg.png";
 import img4 from "../images/hritgroupofinstitutions.png";
+import modiji from "../images/modiji.png";
 import admissionImg from "../images/admissionlinkimg.png";
 import Admissionform from "../AdmissionForm/AdmissionForm";
 
@@ -11,7 +12,7 @@ const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(img1);
   const [dots, setDots] = useState(Array(4).fill(false));
   const [showForm, setShowForm] = useState(true);
-  const images = [img1, img2, img3, img4];
+  const images = [modiji, img2, modiji, img4];
 
   useEffect(() => {
     const interval = setInterval(() => {

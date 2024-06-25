@@ -1,111 +1,57 @@
 import React from 'react';
-import './Footer.css';
-
+import { FaInstagram, FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { IoHomeOutline } from "react-icons/io5";
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
+import './Footer.css'
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="containfooter">
-        <div className="row">
-          <div className="col-md-4">
-            <img src="/proctur-logo.png" alt="Proctur Logo" className="footer-logo" />
-            <p>Simplifying Education Management</p>
-            <ul className="footer-contact">
-              <li>
-                <i className="fas fa-map-marker-alt"></i> Ground Floor, H-146 & 147, Sector 63
-                Rd, Noida, Uttar Pradesh 201301
-              </li>
-              <li>
-                <i className="fas fa-phone-alt"></i> 99718 39153
-              </li>
-              <li>
-                <i className="fas fa-envelope"></i> Inquiry@proctur.com
-              </li>
-            </ul>
-            <ul className="social-links">
-              <li>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-facebook-f"></i>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <i className="fab fa-linkedin-in"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-3">
-            <h3>Links</h3>
-            <ul>
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Career</a>
-              </li>
-              <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms and Conditions</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-3">
-            <h3>Solutions</h3>
-            <ul>
-              <li>
-                <a href="#">For Coaching Institutes</a>
-              </li>
-              <li>
-                <a href="#">For Schools</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-3">
-            <h3>Resources</h3>
-            <ul>
-              <li>
-                <a href="#">Student Attendance Management</a>
-              </li>
-              <li>
-                <a href="#">Online Teaching Platform</a>
-              </li>
-              <li>
-                <a href="#">Online Exam Software</a>
-              </li>
-            </ul>
-          </div>
-          <div className="col-md-3">
-            <h3>Newsletter</h3>
-            <form>
-              <input type="email" placeholder="Enter Email" />
-              <button type="submit">Subscribe</button>
-            </form>
-            <p>Subscribe to our Newsletter</p>
-          </div>
+
+    <div className="footer">
+
+        <div className="footer-content">
+            <div className="footer-section university">
+            <h1>HRIT</h1>
+            <h3>UNIVERSITY</h3>
+            <p>HRIT Group excels academically, supported by alumni and top companies,
+                founded by Dr. Anil Agarwal, MP, offering diverse courses.</p>
+                <div className="social-icons">
+             <FaInstagram />
+             <FaTwitter />
+             <FaFacebook />
+             <FaLinkedin />
+           </div>
+         
         </div>
-        <div className="row">
-          <div className="col-md-12">
-            <p className="copyright">© 2022 Eduspace Technologies Pvt. Ltd. All Rights Reserved</p>
-          </div>
+        <div className='linkUl'>
+            <h4>Link</h4>
+            <ul>
+
+                <li>Links</li>
+                <li>Contact</li>
+                <li>About Us</li>
+                <li>Privacy Policy</li>
+                <li>Terms and Conditions</li>
+            </ul>
         </div>
+        <div className="addressUl">
+        <h4>Address</h4>
+        <ul>
+
+                <li><IoHomeOutline className='adressicon'/>8th kilometer, Milestone Delhi, Meerut Rd, Jalalabad 0069 Morta, Ghaziabad, Uttar Pradesh 201003</li>
+                <li><IoCallOutline className='adressicon'/>9971600288</li>
+                <li><MdOutlineEmail className='adressicon'/>enquirieshrit@gmail.com</li>
+                
+            </ul>
+        </div>
+       
+        </div>
+        <div className="footer-bottom">
+        <p>Copyright © 2016 - 2017 Hrit.ac.in. All rights reserved.</p>
+        <p>Powered by Proctur</p>
       </div>
-    </footer>
+    </div>
   );
-};
+}
 
 export default Footer;

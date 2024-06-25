@@ -15,12 +15,14 @@ body {
 } */
 
 .containadmissionform {
-  max-width: 600px;
+  max-width: 500px;
   margin: 40px auto;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  height: 95vh;
+  overflow: scroll;
 }
 
 h1 {
@@ -44,15 +46,15 @@ form {
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 }
 .form-group input{
-  height: 30px;
+  height: 24px;
   width: 95%;
   border-radius: 5px;
   color: gray;
   border: 1px solid #ccc;
-  padding-left: 10px;
+  padding-left: 8px;
 
 }
 .captchainputandimg {
@@ -72,49 +74,62 @@ form {
   height: 30px;
 }
 #admissionFormRegisterBtn{
-  width: 40%;
-  padding: 10px;
-  border: 1px solid;
+  width: 54%;
+  height: 36px;
   color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
-  margin-top: 20px;
   cursor: pointer;
   transition: opacity 0.3s ease;
   background-color: #1181D2;
+  border-color: #1181D2;
+  border-right: 1px;
   font-weight: bold;
+
 }
 #admissionFormLoginBtn{
-  width: 40%;
+  width: 46%;
   padding: 10px;
-   border: 1px solid  #1181D2;
+   border: none;
   color: #1181D2;
   border-radius: 5px;
   box-sizing: border-box;
-  margin-top: 20px;
   cursor: pointer;
   transition: opacity 0.3s ease;
+  background-color: #fff;
+  font-weight: bold;
+}
+.admissionFormLoginBtn{
+  width: 96%;
+   border: 1px solid  #1181D2;
+  color: #1181D2;
+  border-radius: 5px;
   background-color: #fff;
   font-weight: bold;
 }
 
 label {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   color: #000000;
-
+font-size: 12px;
 }
 
 
 input[type="tel"],
 select {
   width: 100%;
-  height: 40px;
-  padding: 10px;
-  font-size: 16px;
+  height: 24px;
+ 
+  font-size: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   color: gray;
+}
+input::placeholder {
+  font-family: 'Roboto', sans-serif;
+  font-size: 10px; /* Adjust the size as needed */
+  color: #888888; /* Adjust the color as needed */
 }
 
 input[type="text"]:focus,
@@ -124,6 +139,15 @@ select:focus {
   border-color: #337ab7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+.select-roboto {
+  font-family: 'Roboto', sans-serif;
+  font-size: 8px; /* Adjust the size as needed */
+  color: #333333; /* Adjust the color as needed */
+}
+
+.select-roboto option[disabled] {
+  color: #888888; /* Adjust the color as needed */
+}
 
 .mobile-number-input {
   display: flex;
@@ -131,10 +155,12 @@ select:focus {
 }
 
 .mobile-number-input select {
-  width: 70px;
+  width: 20%;
   margin-right: 10px;
-  padding: 10px;
+  height: 26px;
+  padding-left: 4px;
   border: 1px solid #ccc;
+
 }
 
 .mobile-number-input input[type="text"] {
@@ -163,6 +189,10 @@ select:focus {
   background-color: transparent;
   cursor: pointer;
 }
+.formSubmit{
+  display: flex;
+  align-items: flex-start;
+}
 
 .captcha-container button[type="button"]:hover {
   background-color: #f0f0f0;
@@ -184,6 +214,7 @@ button[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 16px;
 }
 
 button[type="submit"]:hover {

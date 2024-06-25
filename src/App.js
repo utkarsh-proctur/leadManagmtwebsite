@@ -10,7 +10,7 @@ import Admissionform from "./components/AdmissionForm/AdmissionForm";
 import Process from "./components/Process/Process";
 import Campus from "./components/Campus/Campus";
 import Footer from "./components/Footer/Footer";
-
+import Recruiters from "./components/Recruiters/Recruiters";
 function App() {
   return (
     <Router>
@@ -21,8 +21,8 @@ function App() {
         <Admissionprocess />
         <Process />
         <Campus />
-
-        {/* <Footer/> */}
+        <Recruiters />
+        <Footer />
       </div>
     </Router>
   );
