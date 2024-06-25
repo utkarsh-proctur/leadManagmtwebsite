@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #DEEBF6;
+    margin-top: 150px;
+  }
+  
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .process-item {
+    background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 100px;
+  width: 120px;
+  margin: 20px;
+  
+  }
+  
+  .process-number {
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .process-title {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }

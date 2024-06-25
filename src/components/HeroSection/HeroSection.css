@@ -1,0 +1,67 @@
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  
+}
+
+.hero-content {
+  position:relative;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.admission-img {
+  width: 45px; 
+  height: 300px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  
+}
+
+.admission-img:hover {
+  opacity: 0.8;
+}
+
+.dots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  
+}
+
+.dot .active {
+  background-color: #007bff;
+  
+}

@@ -1,0 +1,26 @@
+.navbar {
+  background-color: #f0f0f0; 
+  padding: 10px 0;
+  align-items: center;
+}
+
+.contain_navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo-left {
+  height: 40px;
+  margin-left: 20px;
+}
+.logo-right {
+  height: 40px;
+  margin-right: 20px;
+  margin-left: auto; 
+}
+
+.college-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 10px; 
+}
