@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./AdmissionForm.css";
 import captchaimg from "../images/captchaimg.png";
 import camelize from "./../../../node_modules/dom-helpers/esm/camelize";
+import refresh from "../images/refersh.png";
+import captchacode from "../images/captch.png";
 function Admissionform() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -214,32 +216,38 @@ function Admissionform() {
               <option value="B.Tech">B.Tech</option>
             </select>
           </div>
-        </div>
-        <div className="form-group">
-          <div className="captchainputandimg">
-            <div className="captcha-container">
-              {/*</span> <span>ABc453#</span>
-            <button type="button" disabled>
-              <span className="material-icons">refresh</span>
-            </button> */}
-              <img src={captchaimg} alt="captcha" className="captcha-img" />
-            </div>
-            <div className="captchainput">
-              <label htmlFor="captcha">
-                Enter Captcha{" "}
-                <span style={{ color: "red", marginLeft: "4px" }}>*</span>
-              </label>
-              <input
-                type="text"
-                id="captcha"
-                value={captcha}
-                onChange={(e) => setCaptcha(e.target.value)}
-                required
-              />
+          <div className="form-group"></div>
+          <div className="form-group" style={{ backgroundColor: "#D9D9D9" }}>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-around",
+                width: "100%",
+                height: "100%",
+              }}
+            >
+              <img style={{ height: 31, width: 147 }} src={captchacode} />
+              <img style={{ height: 20, width: 20 }} src={refresh} />
             </div>
           </div>
+          <div className="form-group">
+            <label htmlFor="name">
+              Enter Captcha{" "}
+              <span style={{ color: "red", marginLeft: "4px" }}>*</span>
+            </label>
+            <input
+              type="text"
+              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter Captcha"
+              required
+            />
+          </div>
         </div>
-        <div className="formSubmit">
+
+        <div className="formSubmit" style={{ marginTop: "12px" }}>
           <input
             type="checkbox"
             id="isAuthorized"
@@ -247,7 +255,7 @@ function Admissionform() {
             onChange={(e) => setIsAuthorized(e.target.checked)}
           />
           <label htmlFor="isAuthorized" style={{ textAlign: "justify" }}>
-            I authorize to contact me with updates/ notifications via Email/
+            *I authorize to contact me with updates/ notifications via Email/
             SMS/ Whatsapp/ Call, which overrides DND/NDNC registration
           </label>
         </div>

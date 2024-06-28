@@ -12,7 +12,7 @@ const HeroSection = () => {
   const [currentImage, setCurrentImage] = useState(img1);
   const [dots, setDots] = useState(Array(4).fill(false));
   const [showForm, setShowForm] = useState(true);
-  const images = [modiji, img2, modiji, img4];
+  const images = [modiji, img3, modiji, img4];
 
   useEffect(() => {
     const interval = setInterval(() => {

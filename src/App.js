@@ -11,6 +11,7 @@ import Process from "./components/Process/Process";
 import Campus from "./components/Campus/Campus";
 import Footer from "./components/Footer/Footer";
 import Recruiters from "./components/Recruiters/Recruiters";
+import Instruction from "./components/Instructions";
 function App() {
   return (
     <Router>
@@ -19,7 +20,9 @@ function App() {
         <Hero />
         <Courses />
         <Admissionprocess />
+        <Instruction />
         <Process />
+
         <Campus />
         <Recruiters />
         <Footer />

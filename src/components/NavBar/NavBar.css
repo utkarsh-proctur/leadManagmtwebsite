@@ -1,5 +1,11 @@
 .navbar {
-  background-color: #f0f0f0; 
+  background-color: #374143; 
+  height: 19vh;
+  display: flex;
+  padding-left: 72px;
+  padding-right: 72px;
+  justify-content: space-between;
+  
 
 }
 .navbarlogo{
