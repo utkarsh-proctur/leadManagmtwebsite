@@ -217,7 +217,7 @@ function Admissionform() {
             </select>
           </div>
           <div className="form-group"></div>
-          <div className="form-group" style={{ backgroundColor: "#D9D9D9" }}>
+          <div className="form-group" style={{ backgroundColor: "#D5E8F7" }}>
             <div
               style={{
                 display: "flex",

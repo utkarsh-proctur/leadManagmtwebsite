@@ -30,7 +30,11 @@ const coursesData = [
 const Courses = () => {
   return (
     <div className="containoffercourses">
-      <h2 className="titleoffercourses"></h2>
+      <h2 className="titleoffercourses">Available Courses </h2>
+      <div style={{ display: "flex", flexDirection: "column" }}>
+        <span> Undergraduate Courses</span>
+      </div>
+
       <div className="course-grid-offercourses">
         {coursesData.map((course, index) => (
           <CourseCard
