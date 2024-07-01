@@ -1,7 +1,6 @@
 
 .footer {
-  background-color: #065BAA;
-  ;
+  background-image: url(../images/Slice\ 2\ \(5\).png);
   color: white;
   width: 97.4%;
   border: 15px solid #f3f3f3
@@ -83,12 +82,15 @@
 }
 
 .social-icons > * {
-  margin: 0 20px 0 0px;
+  margin: 15px 20px 0 3px;
   font-size: 24px;
   padding: 7px;
   cursor: pointer;
   border-radius: 43px;
   background: #E68B43;
+  color: white;
+  width: 36px;
+  height: 26px;
 }
 
 .footer-bottom {
@@ -98,7 +100,8 @@
   align-items: center;
   padding: 10px 7%; 
   font-size: 14px;
-  background: #23237c
+  background-color: hsla(120, 7%, 18%, 0.3);
+
 }
 
 

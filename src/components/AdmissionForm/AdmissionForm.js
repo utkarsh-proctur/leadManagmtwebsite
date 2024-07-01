@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AdmissionForm.css";
 import captchaimg from "../images/captchaimg.png";
 import camelize from "./../../../node_modules/dom-helpers/esm/camelize";
 import refresh from "../images/refersh.png";
 import captchacode from "../images/captch.png";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha,
+} from "react-simple-captcha";
 function Admissionform() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,8 +36,44 @@ function Admissionform() {
     });
   };
 
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
+
+  const doSubmit = () => {
+    let user_captcha_value =
+      document.getElementById("user_captcha_input").value;
+
+    if (validateCaptcha(user_captcha_value) == true) {
+      alert("Captcha Matched");
+    } else {
+      alert("Captcha Does Not Match");
+    }
+  };
+
   return (
     <div className="containadmissionform">
+      <div className="col mt-3">
+        <LoadCanvasTemplate />
+      </div>
+      <div className="col mt-3">
+        <div>
+          <input
+            placeholder="Enter Captcha Value"
+            id="user_captcha_input"
+            name="user_captcha_input"
+            type="text"
+          ></input>
+        </div>
+      </div>
+
+      <div className="col mt-3">
+        <div>
+          <button class="btn btn-primary" onClick={() => doSubmit()}>
+            Submit
+          </button>
+        </div>
+      </div>
       <div className="admissionFormLoginBtn">
         <button type="button" id="admissionFormRegisterBtn">
           Register
