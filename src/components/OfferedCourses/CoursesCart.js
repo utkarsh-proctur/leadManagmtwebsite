@@ -6,7 +6,7 @@ const CourseCard = ({ title, styleline, description }) => {
     <>
       <div
         style={{
-          backgroundColor: "#F9FCFF",
+          backgroundColor:"white",
           borderRadius: 15,
           padding: 22,
           paddingLeft: 24,
@@ -14,6 +14,8 @@ const CourseCard = ({ title, styleline, description }) => {
           display: "flex",
           textAlign: "left",
           flexDirection: "column",
+          boxShadow:"0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.1)",
+          border:"1px solid #D9D9D9"
         }}
       >
         <span style={{ fontSize: "20px", fontWeight: "600" }}>{title}</span>

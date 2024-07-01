@@ -74,6 +74,7 @@ function Admissionform() {
               Mobile Number{" "}
               <span style={{ color: "red", marginLeft: "4px" }}>*</span>
             </label>
+
             <div className="mobile-number-input">
               <select value="+91" disabled>
                 <option value="+91">+91</option>
@@ -87,7 +88,20 @@ function Admissionform() {
                 required
               />
             </div>
+            <span
+              style={{
+                fontSize: "12px",
+                fontWeight: "400",
+                color: "#065AA9",
+                display: "flex",
+                marginTop: "6px",
+                marginBottom: "-4px",
+              }}
+            >
+              Send OTP
+            </span>
           </div>
+
           <div className="form-group">
             <label htmlFor="otp">
               Enter OTP{" "}
