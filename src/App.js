@@ -12,6 +12,8 @@ import Campus from "./components/Campus/Campus";
 import Footer from "./components/Footer/Footer";
 import Recruiters from "./components/Recruiters/Recruiters";
 import Instruction from "./components/Instructions";
+import NewAdmissionProcess from "./components/NewAdmissionProcess/newAdmissionProcess";
+import OurCampus from "./components/OurCampus/ourCampus";
 function App() {
   return (
     <Router>
@@ -19,11 +21,14 @@ function App() {
         <Navbar />
         <Hero />
         <Courses />
-        <Admissionprocess />
+        {/* <Admissionprocess /> */}
         <Instruction />
-        <Process />
+        {/* <Admissionprocess /> */}
+        <NewAdmissionProcess />
+        <OurCampus />
+        {/* <Process /> */}
 
-        <Campus />
+        {/* <Campus /> */}
         <Recruiters />
         <Footer />
       </div>
