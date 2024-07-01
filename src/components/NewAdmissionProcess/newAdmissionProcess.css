@@ -1,0 +1,118 @@
+.main-NewAdmissionProcess {
+  position: relative;
+  padding: 20px;
+  /* background-color: #F3F9FF; */
+}
+.headerStyle {
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  color: #102048;
+  margin-bottom: 20px;
+}
+.process-box img {
+  max-width: 100%;
+  height: auto;
+}
+.process-box {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  border: 2px solid #065baa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: white;
+  position: relative;
+}
+.process-box + .process-box {
+  margin-left: 30px;
+}
+.admission-process-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.process-box-text {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 10px;
+}
+.box-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+.box-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  right: 5%;
+  height: 2px;
+  background: #065baa;
+  z-index: -1;
+}
+.process-box:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 30px);
+  background: #065baa;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .process-box {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+  }
+  .process-box + .process-box {
+    margin-left: 20px;
+  }
+  .box-container::before {
+    left: 10%;
+    right: 10%;
+  }
+  .process-box-text {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 480px) {
+  .admission-process-container {
+    flex-direction: column;
+  }
+  .process-box + .process-box {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .box-container::before {
+    top: auto;
+    bottom: 50%;
+    left: 50%;
+    width: 2px;
+    height: calc(100% - 20px);
+  }
+  .process-box:not(:last-child)::after {
+    top: 100%;
+    left: 50%;
+    width: 2px;
+    height: 20px;
+  }
+  .process-box:not(:last-child)::before {
+    top: calc(100% + 20px);
+    left: 50%;
+    width: 10px;
+    height: 10px;
+  }
+}
