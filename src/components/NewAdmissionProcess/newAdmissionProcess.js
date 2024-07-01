@@ -17,8 +17,10 @@ const NewAdmissionProcess = () => {
               alt="Register"
               className="register-img box-icon"
             />
-            <text className="process-box-text">Register Your Self</text>
+            <span className="process-box-text">Register Yourself</span>
           </div>
+
+          <div className="dotStyle"></div>
 
           <div className="application-box process-box">
             <img
@@ -26,8 +28,10 @@ const NewAdmissionProcess = () => {
               alt="Application"
               className="application-img box-icon"
             />
-            <text className="process-box-text">Fill the Application</text>
+            <span className="process-box-text">Fill the Application</span>
           </div>
+
+          <div className="dotStyle"></div>
 
           <div className="payfee-box process-box">
             <img
@@ -35,8 +39,10 @@ const NewAdmissionProcess = () => {
               alt="Pay Fees"
               className="payfees-img box-icon"
             />
-            <text className="process-box-text">Pay the Fees</text>
+            <span className="process-box-text">Pay the Fees</span>
           </div>
+
+          <div className="dotStyle"></div>
 
           <div className="final-submission-box process-box">
             <img
@@ -44,7 +50,7 @@ const NewAdmissionProcess = () => {
               alt="Final Submission"
               className="finalsubmission-img box-icon"
             />
-            <text className="process-box-text">Final Submission</text>
+            <span className="process-box-text">Final Submission</span>
           </div>
         </div>
       </div>
