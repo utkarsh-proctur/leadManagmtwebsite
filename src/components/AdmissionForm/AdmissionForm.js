@@ -1,9 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./AdmissionForm.css";
 import captchaimg from "../images/captchaimg.png";
 import camelize from "./../../../node_modules/dom-helpers/esm/camelize";
 import refresh from "../images/refersh.png";
 import captchacode from "../images/captch.png";
+import ReCAPTCHA from "react-google-recaptcha";
+
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplate,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha,
+} from "react-simple-captcha";
 function Admissionform() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,8 +38,45 @@ function Admissionform() {
     });
   };
 
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
+
+  const doSubmit = () => {
+    let user_captcha = document.getElementById("user_captcha_input").value;
+
+    if (validateCaptcha(user_captcha) === true) {
+      alert("Captcha Matched");
+      loadCaptchaEnginge(6);
+      document.getElementById("user_captcha_input").value = "";
+    } else {
+      alert("Captcha Does Not Match");
+      document.getElementById("user_captcha_input").value = "";
+    }
+  };
+
   return (
     <div className="containadmissionform">
+      <LoadCanvasTemplate />
+      {/* <LoadCanvasTemplateNoReload /> */}
+      <div className="col mt-3">
+        <div>
+          <input
+            placeholder="Enter Captcha Value"
+            id="user_captcha_input"
+            name="user_captcha_input"
+            type="text"
+          ></input>
+        </div>
+      </div>
+
+      <div className="col mt-3">
+        <div>
+          <button class="btn btn-primary" onClick={() => doSubmit()}>
+            Submit
+          </button>
+        </div>
+      </div>
       <div className="admissionFormLoginBtn">
         <button type="button" id="admissionFormRegisterBtn">
           Register
@@ -87,6 +132,17 @@ function Admissionform() {
                 required
               />
             </div>
+            <span
+              style={{
+                fontSize: "12px",
+                fontWeight: "400",
+                color: "#1181D2",
+                display: "flex",
+                marginTop: "6px",
+              }}
+            >
+              Send OTP
+            </span>
           </div>
           <div className="form-group">
             <label htmlFor="otp">
